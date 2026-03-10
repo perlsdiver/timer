@@ -1,0 +1,7 @@
+TODO
+- rename INDEX.html → index.html
+- consolidate the two css files
+- move images into a folder
+- the inline styles in INDEX.html should probably go in the css file
+- maybe put js files in their own folder?
+- add a sound when the timer ends??

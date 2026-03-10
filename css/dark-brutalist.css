@@ -1,0 +1,97 @@
+/* Dark Digital Brutalism Theme */
+body.theme-dark-brutalist {
+  background: #000;
+  color: #fff;
+  font-family: "Courier New", Courier, monospace;
+}
+
+body.theme-dark-brutalist .card {
+  background: #000;
+  border: 4px solid #fff;
+  border-radius: 0;
+  box-shadow: 8px 8px 0px #00ff00; /* Neon Green Shadow */
+  transition: transform 0.1s;
+}
+
+body.theme-dark-brutalist .card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 10px 10px 0px #00ff00;
+}
+
+body.theme-dark-brutalist button {
+  background: #00ff00; /* Neon Green */
+  color: #000;
+  border: 3px solid #fff;
+  border-radius: 0;
+  font-weight: 900;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 0px #fff;
+}
+
+body.theme-dark-brutalist button:hover {
+  background: #ff00ff; /* Neon Magenta */
+  color: #fff;
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0px #fff;
+}
+
+body.theme-dark-brutalist button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #fff;
+}
+
+body.theme-dark-brutalist button:disabled {
+  background: #333;
+  color: #888;
+  box-shadow: none;
+  transform: none;
+  border-color: #444;
+}
+
+body.theme-dark-brutalist .timer-display {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 80px;
+  color: #fff;
+  background: #330066; /* Deep Purple */
+  display: inline-block;
+  padding: 10px 20px;
+  border: 3px solid #00ff00;
+  margin: 20px 0;
+  text-shadow: 3px 3px 0px #000;
+}
+
+body.theme-dark-brutalist #goal-input {
+  background: #111;
+  border: 3px solid #00ff00;
+  border-radius: 0;
+  color: #00ff00;
+  font-weight: bold;
+}
+
+body.theme-dark-brutalist header {
+  background: #000;
+  border-bottom: 5px solid #00ff00;
+  color: #00ff00;
+}
+
+body.theme-dark-brutalist header h1 {
+  font-size: 32px;
+  text-shadow: 3px 3px 0px #fff;
+  color: #fff;
+}
+
+body.theme-dark-brutalist .session-type {
+  color: #00ff00;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+body.theme-dark-brutalist .session-entry {
+  border-bottom: 2px solid #333;
+}
+
+body.theme-dark-brutalist footer {
+  color: #00ff00;
+  border-top: 2px solid #00ff00;
+  background: #000;
+}

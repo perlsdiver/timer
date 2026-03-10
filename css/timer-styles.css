@@ -1,0 +1,93 @@
+/* timer component - split out from main for some reason */
+.card {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.timer-card {
+  text-align: center;
+  padding: 32px 20px;
+}
+
+.timer-display {
+  font-size: 72px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+  color: #fff;
+  line-height: 1;
+  margin: 12px 0;
+}
+
+.empty-msg {
+  color: #555; font-style: italic; font-size: 13px;
+}
+
+.session-entry {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 8px 0; border-bottom: 1px solid #222;
+  font-size: 14px; color: #aaa;
+}
+.session-entry:last-child { border-bottom: none; }
+
+.session-type {
+  font-weight: 600; color: #5a8dee;
+}
+
+.session-time {
+  font-family: monospace; font-size: 12px; color: #666;
+}
+
+/* Goal Card Styling */
+.goal-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.goal-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.goal-input-container label {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #888;
+}
+
+#goal-input {
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  border-radius: 6px;
+  padding: 10px 12px;
+  color: #eee;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#goal-input:focus {
+  border-color: #5a8dee;
+}
+
+#goal-display {
+  font-size: 14px;
+  color: #aaa;
+  font-style: italic;
+  margin-top: 4px;
+}
+
+#goal-display.hidden {
+  display: none;
+}
+
+#current-goal-text {
+  color: #5a8dee;
+  font-weight: 600;
+  font-style: normal;
+}
