@@ -10,6 +10,8 @@ const sessionLog = document.getElementById("session-log");
 const FOCUS_MINUTES = 25;
 const BREAK_MINUTES = 5;
 
+const alarmSound = new Audio("assets/alarm.mp3");
+
 let totalSeconds = FOCUS_MINUTES * 60;
 let remaining = totalSeconds;
 let interval = null;
@@ -29,6 +31,7 @@ startBtn.addEventListener("click", function () {
     if (remaining <= 0) {
       clearInterval(interval);
       isRunning = false;
+      alarmSound.play();
       logSession(isFocus ? "Focus" : "Break", isFocus ? FOCUS_MINUTES : BREAK_MINUTES);
 
       // switch mode
