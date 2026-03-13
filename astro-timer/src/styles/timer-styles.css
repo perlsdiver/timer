@@ -1,0 +1,243 @@
+/* timer component - split out from main for some reason */
+.card {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.timer-card {
+  text-align: center;
+  padding: 32px 20px;
+}
+
+.timer-display {
+  font-size: 72px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+  color: #fff;
+  line-height: 1;
+  margin: 12px 0;
+}
+
+.empty-msg {
+  color: #555; font-style: italic; font-size: 13px;
+}
+
+.session-entry {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 8px 0; border-bottom: 1px solid #222;
+  font-size: 14px; color: #aaa;
+}
+.session-entry:last-child { border-bottom: none; }
+
+.session-type {
+  font-weight: 600; color: #5a8dee;
+}
+
+.session-time {
+  font-family: monospace; font-size: 12px; color: #666;
+}
+
+/* Goal Card Styling */
+.goal-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.goal-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.goal-input-container label {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #888;
+}
+
+#goal-input {
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  border-radius: 6px;
+  padding: 10px 12px;
+  color: #eee;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#goal-input:focus {
+  border-color: #5a8dee;
+}
+
+#goal-display {
+  font-size: 14px;
+  color: #aaa;
+  font-style: italic;
+  margin-top: 4px;
+}
+
+#goal-display.hidden {
+  display: none;
+}
+
+#current-goal-text {
+  color: #5a8dee;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Mode Selector Styles */
+.mode-selector {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.mode-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #333;
+  color: #888;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 13px;
+}
+
+.mode-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #eee;
+}
+
+.mode-btn.active {
+  background: #5a8dee;
+  color: white;
+  border-color: #5a8dee;
+}
+
+.settings-trigger {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.text-link {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 13px;
+  color: #666;
+  transition: color 0.2s;
+}
+
+.text-link:hover {
+  color: #999;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  backdrop-filter: blur(4px);
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  width: 90%;
+  max-width: 340px;
+  padding: 30px;
+  background: #1e1e1e;
+  border: 1px solid #333;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.setting-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.setting-group label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.setting-group input {
+  padding: 12px;
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  border-radius: 6px;
+  color: #eee;
+  font-weight: 600;
+  font-size: 16px;
+  outline: none;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.modal-actions button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#save-settings-btn {
+  background: #5a8dee;
+  color: white;
+  border: none;
+}
+
+#close-settings-btn {
+  background: #333 !important;
+  color: #aaa !important;
+  border: none;
+}
+
+/* Attribution Styles */
+.attribution {
+  margin-top: 20px;
+  font-size: 11px;
+  color: #555;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.attribution p {
+  margin: 4px 0;
+}
+
+.attribution a {
+  color: #777;
+  text-decoration: underline;
+}
+
+.attribution a:hover {
+  color: #999;
+}
