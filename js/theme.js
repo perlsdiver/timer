@@ -5,7 +5,7 @@ const body = document.body;
 
 // List of available themes (classes)
 // "" (empty string) represents the original theme
-const themes = ["", "theme-brutalist", "theme-dark-brutalist"];
+const themes = ["", "theme-brutalist", "theme-dark-brutalist", "theme-indie-cat"];
 
 // Check for saved theme preference
 const savedTheme = localStorage.getItem("focus-theme") || "";

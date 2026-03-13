@@ -1,0 +1,77 @@
+/* Indie Web / Cat Aesthetic Theme */
+.theme-indie-cat {
+  --bg-color: #fff9f0;
+  --text-color: #5d4037;
+  --accent-color: #ff8a80;
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --border-style: 3px dashed #8d6e63;
+  --font-family: 'Comic Sans MS', 'Chalkboard SE', cursive;
+}
+
+.theme-indie-cat body {
+  background-color: var(--bg-color);
+  background-image: url('https://placecats.com/128/128');
+  background-repeat: repeat;
+  background-size: 100px;
+  color: var(--text-color);
+  font-family: var(--font-family);
+}
+
+.theme-indie-cat .card {
+  background: var(--card-bg);
+  border: var(--border-style);
+  border-radius: 20px;
+  box-shadow: 8px 8px 0px #bcaaa4;
+}
+
+.theme-indie-cat h1, .theme-indie-cat h2, .theme-indie-cat h3 {
+  color: var(--accent-color);
+  text-shadow: 1px 1px 0px #fff;
+}
+
+.theme-indie-cat .timer-display {
+  color: #ef5350;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.theme-indie-cat button {
+  background: #ffccbc;
+  border: 2px solid #8d6e63;
+  border-radius: 12px;
+  color: #5d4037;
+  font-family: inherit;
+  font-weight: bold;
+  padding: 8px 16px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px #8d6e63;
+}
+
+.theme-indie-cat button:hover {
+  background: #ffab91;
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px #8d6e63;
+}
+
+.theme-indie-cat button:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px #8d6e63;
+}
+
+.theme-indie-cat .mode-btn.active {
+  background: #ff8a80;
+  color: white;
+  border-color: #d32f2f;
+}
+
+.theme-indie-cat input {
+  border: 2px solid #8d6e63;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.theme-indie-cat footer, .theme-indie-cat .attribution {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ffccbc;
+}
