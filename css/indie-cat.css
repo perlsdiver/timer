@@ -15,6 +15,7 @@ body.theme-indie-cat {
   background-size: 100px;
   color: var(--text-color);
   font-family: var(--font-family);
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' style='font-size:24px'><text y='1.1em'>🐾</text></svg>"), auto;
 }
 
 .theme-indie-cat .card {

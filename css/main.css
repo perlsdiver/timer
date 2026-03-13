@@ -5,6 +5,7 @@ body {
   font-family: system-ui, -apple-system, sans-serif;
   background: #111; color: #eee;
   min-height: 100vh; display: flex; flex-direction: column;
+  cursor: crosshair;
 }
 
 header {

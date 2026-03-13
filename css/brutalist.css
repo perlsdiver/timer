@@ -3,6 +3,7 @@ body.theme-brutalist {
   background: #f0f0f0;
   color: #000;
   font-family: "Courier New", Courier, monospace;
+  cursor: help; /* Bold question mark for Brutalist style */
 }
 
 body.theme-brutalist .card {

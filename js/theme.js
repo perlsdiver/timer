@@ -54,6 +54,9 @@ function generateRandomTheme() {
   const bgImageId = Math.floor(Math.random() * 1000);
   const bgUrl = `https://picsum.photos/seed/${bgImageId}/800/600?blur=5`;
 
+  const cursors = ["cell", "copy", "wait", "move", "vertical-text", "zoom-in", "grab"];
+  const randomCursor = cursors[Math.floor(Math.random() * cursors.length)];
+
   const styleSheet = document.createElement("style");
   styleSheet.id = "random-theme-style";
   styleSheet.innerHTML = `
@@ -64,6 +67,7 @@ function generateRandomTheme() {
       background-attachment: fixed !important;
       color: ${textColor} !important;
       font-family: ${randomFont} !important;
+      cursor: ${randomCursor} !important;
     }
     .theme-random .card {
       background: rgba(255, 255, 255, 0.8) !important;

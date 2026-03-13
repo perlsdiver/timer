@@ -3,6 +3,7 @@ body.theme-dark-brutalist {
   background: #000;
   color: #fff;
   font-family: "Courier New", Courier, monospace;
+  cursor: alias; /* Curvy arrow for dark mode */
 }
 
 body.theme-dark-brutalist .card {
