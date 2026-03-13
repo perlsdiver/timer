@@ -4,20 +4,77 @@ const timerEl = document.getElementById("timer");
 const startBtn = document.getElementById("start-btn");
 const pauseBtn = document.getElementById("pause-btn");
 const resetBtn = document.getElementById("reset-btn");
-const modeLabel = document.getElementById("mode-label");
 const sessionLog = document.getElementById("session-log");
 
-const FOCUS_MINUTES = 25;
-const BREAK_MINUTES = 5;
+const pomodoroBtn = document.getElementById("pomodoro-btn");
+const shortBtn = document.getElementById("short-btn");
+const longBtn = document.getElementById("long-btn");
+
+const settingsModal = document.getElementById("settings-modal");
+const openSettingsBtn = document.getElementById("open-settings-btn");
+const closeSettingsBtn = document.getElementById("close-settings-btn");
+const saveSettingsBtn = document.getElementById("save-settings-btn");
+
+const pomodoroInput = document.getElementById("pomodoro-duration");
+const shortInput = document.getElementById("short-duration");
+const longInput = document.getElementById("long-duration");
 
 const alarmSound = new Audio("assets/alarm.mp3");
 
-let totalSeconds = FOCUS_MINUTES * 60;
-let remaining = totalSeconds;
+// Default Settings
+let settings = {
+  pomodoro: 25,
+  short: 5,
+  long: 15
+};
+
+let currentMode = 'pomodoro'; // 'pomodoro', 'short', 'long'
+let remaining = settings.pomodoro * 60;
 let interval = null;
 let isRunning = false;
-let isFocus = true;
 
+// Load settings from localStorage
+function loadSettings() {
+  const savedSettings = localStorage.getItem("timer-settings");
+  if (savedSettings) {
+    settings = JSON.parse(savedSettings);
+    pomodoroInput.value = settings.pomodoro;
+    shortInput.value = settings.short;
+    longInput.value = settings.long;
+  }
+  
+  // Update initial display based on default/loaded settings
+  remaining = settings[currentMode] * 60;
+  updateDisplay();
+}
+
+function updateDisplay() {
+  const m = Math.floor(remaining / 60);
+  const s = remaining % 60;
+  timerEl.textContent = pad(m) + ":" + pad(s);
+  document.title = `${pad(m)}:${pad(s)} - Focus Timer`;
+}
+
+function pad(num) {
+  return num < 10 ? "0" + num : num;
+}
+
+function switchMode(mode) {
+  clearInterval(interval);
+  isRunning = false;
+  currentMode = mode;
+  remaining = settings[mode] * 60;
+  
+  // UI Updates
+  [pomodoroBtn, shortBtn, longBtn].forEach(btn => btn.classList.remove("active"));
+  document.getElementById(`${mode}-btn`).classList.add("active");
+  
+  startBtn.disabled = false;
+  pauseBtn.disabled = true;
+  updateDisplay();
+}
+
+// Timer Controls
 startBtn.addEventListener("click", function () {
   if (isRunning) return;
   isRunning = true;
@@ -32,14 +89,10 @@ startBtn.addEventListener("click", function () {
       clearInterval(interval);
       isRunning = false;
       alarmSound.play();
-      logSession(isFocus ? "Focus" : "Break", isFocus ? FOCUS_MINUTES : BREAK_MINUTES);
+      
+      const modeLabel = currentMode === 'pomodoro' ? "Focus" : (currentMode === 'short' ? "Short Break" : "Long Break");
+      logSession(modeLabel, settings[currentMode]);
 
-      // switch mode
-      isFocus = !isFocus;
-      remaining = (isFocus ? FOCUS_MINUTES : BREAK_MINUTES) * 60;
-      totalSeconds = remaining;
-      modeLabel.textContent = isFocus ? "Focus" : "Break";
-      updateDisplay();
       startBtn.disabled = false;
       pauseBtn.disabled = true;
     }
@@ -56,27 +109,47 @@ pauseBtn.addEventListener("click", function () {
 resetBtn.addEventListener("click", function () {
   clearInterval(interval);
   isRunning = false;
-  isFocus = true;
-  remaining = FOCUS_MINUTES * 60;
-  totalSeconds = remaining;
-  modeLabel.textContent = "Focus";
+  remaining = settings[currentMode] * 60;
   updateDisplay();
   startBtn.disabled = false;
   pauseBtn.disabled = true;
 });
 
-function updateDisplay() {
-  var m = Math.floor(remaining / 60);
-  var s = remaining % 60;
-  timerEl.textContent = pad(m) + ":" + pad(s);
-}
+// Mode Switch Listeners
+pomodoroBtn.addEventListener("click", () => switchMode('pomodoro'));
+shortBtn.addEventListener("click", () => switchMode('short'));
+longBtn.addEventListener("click", () => switchMode('long'));
+
+// Settings Modal Logic
+openSettingsBtn.addEventListener("click", () => {
+  settingsModal.classList.remove("hidden");
+});
+
+closeSettingsBtn.addEventListener("click", () => {
+  settingsModal.classList.add("hidden");
+});
+
+saveSettingsBtn.addEventListener("click", () => {
+  settings.pomodoro = parseInt(pomodoroInput.value) || 25;
+  settings.short = parseInt(shortInput.value) || 5;
+  settings.long = parseInt(longInput.value) || 15;
+  
+  localStorage.setItem("timer-settings", JSON.stringify(settings));
+  
+  // If not running, update current remaining time
+  if (!isRunning) {
+    remaining = settings[currentMode] * 60;
+    updateDisplay();
+  }
+  
+  settingsModal.classList.add("hidden");
+});
 
 // === GOAL LOGIC ===
 const goalInput = document.getElementById("goal-input");
 const goalDisplay = document.getElementById("goal-display");
 const currentGoalText = document.getElementById("current-goal-text");
 
-// Load initial goal from localStorage
 const savedGoal = localStorage.getItem("focus-goal");
 if (savedGoal) {
   goalInput.value = savedGoal;
@@ -97,3 +170,6 @@ function updateGoalDisplay(goal) {
     goalDisplay.classList.add("hidden");
   }
 }
+
+// Initialize
+loadSettings();
