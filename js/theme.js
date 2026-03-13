@@ -93,6 +93,13 @@ function generateRandomTheme() {
       background: ${accentColor} !important;
       color: white !important;
     }
+    .theme-random #theme-select {
+      background: ${bgColor} !important;
+      color: ${textColor} !important;
+      border: 2px solid ${accentColor} !important;
+      font-family: ${randomFont} !important;
+      padding: 5px !important;
+    }
   `;
   document.head.appendChild(styleSheet);
 }

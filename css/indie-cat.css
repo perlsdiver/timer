@@ -15,7 +15,17 @@ body.theme-indie-cat {
   background-size: 100px;
   color: var(--text-color);
   font-family: var(--font-family);
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' style='font-size:24px'><text y='1.1em'>🐾</text></svg>"), auto;
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' style='font-size:32px'><text y='1em'>🐱</text></svg>"), auto;
+}
+
+body.theme-indie-cat #theme-select {
+  background: #ffccbc;
+  color: #5d4037;
+  border: 2px dashed #8d6e63;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-family: inherit;
+  font-weight: bold;
 }
 
 .theme-indie-cat .card {

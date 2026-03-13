@@ -3,7 +3,17 @@ body.theme-dark-brutalist {
   background: #000;
   color: #fff;
   font-family: "Courier New", Courier, monospace;
-  cursor: alias; /* Curvy arrow for dark mode */
+  cursor: cell; /* High contrast grid cursor */
+}
+
+body.theme-dark-brutalist #theme-select {
+  background: #00ff00;
+  color: #000;
+  border: 3px solid #fff;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  cursor: pointer;
 }
 
 body.theme-dark-brutalist .card {
