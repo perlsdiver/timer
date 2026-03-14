@@ -1,0 +1,30 @@
+{
+  "project": "Frankentimer",
+  "total_tokens_estimated": 68500,
+  "history": [
+    {
+      "date": "2026-03-13",
+      "version": "1.3.0",
+      "tokens_estimated": 12000,
+      "statement": "AID Statement: Artificial Intelligence Tool: Gemini 2.0 Flash (via Gemini CLI); Execution: Implemented themed version switcher - established Live AID Log architecture - and token tracking heuristic; Data Curation: Created aid-history.json; Writing—Review & Editing: Updated documentation for version switching."
+    },
+    {
+      "date": "2026-03-13",
+      "version": "1.2.0",
+      "tokens_estimated": 8500,
+      "statement": "AID Statement: Artificial Intelligence Tool: Gemini 2.0 Flash (via Gemini CLI); Execution: Used for rebranding to Frankentimer - architecture migration to Astro - and CSS refinement; Writing—Review & Editing: Used for documentation updates."
+    },
+    {
+      "date": "2026-03-12",
+      "version": "1.1.0",
+      "tokens_estimated": 28000,
+      "statement": "AID Statement: Artificial Intelligence Tool: Gemini 2.0 Flash (via Gemini CLI); Execution: Developed theme logic - modal implementation - and audio integration; Visualization: Created dynamic Randomizer CSS logic."
+    },
+    {
+      "date": "2026-03-10",
+      "version": "1.0.0",
+      "tokens_estimated": 20000,
+      "statement": "AID Statement: Artificial Intelligence Tool: Gemini 2.0 Flash (via Gemini CLI); Execution: Used for initial project scaffolding and core timer mechanics; Methodology: Designed Pomodoro logic flow."
+    }
+  ]
+}

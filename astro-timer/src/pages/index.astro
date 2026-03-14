@@ -80,4 +80,13 @@ import Layout from '../layouts/Layout.astro';
     </select>
   </div>
   <a href="/timer/" class="version-switcher">Switch to Classic Version</a>
+
+  <button id="aid-toggle">📜 AID LOG</button>
+  <div id="aid-drawer" class="hidden">
+    <div class="aid-header">
+      <span>AID PROTOCOL</span>
+      <span class="token-stat"><span id="aid-token-count">0</span> TOKENS</span>
+    </div>
+    <div id="aid-statement-text">Loading disclosure...</div>
+  </div>
 </Layout>
