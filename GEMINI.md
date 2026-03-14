@@ -40,7 +40,7 @@ All versions of the application MUST maintain the following in the footer:
 
 ## Project Evolution (Changelog)
 
-- **March 13, 2026:** Rebranded to **Frankentimer**. Integrated the AID Framework. Migrated to Astro while preserving the Vanilla version. Unified UI link styles and expanded theme cursors.
+- **March 13, 2026:** Rebranded to **Frankentimer**. Integrated the AID Framework. Migrated to Astro while preserving the Vanilla version. Unified UI link styles - expanded theme cursors - and added a themed version switcher.
 - **March 12, 2026:** Massive theme expansion (Brutalist, Indie Cat, Randomizer). Added settings modal, session logging, and HQ audio alerts.
 - **March 10, 2026:** Initial prototype creation at the CUNY AI Lab workshop. Basic Pomodoro logic and goal tracking implemented.
 

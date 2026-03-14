@@ -27,7 +27,8 @@ This project follows the [AI Use Disclosure Guide](https://crln.acrl.org/index.p
   - **Ethical Framework:** Integrated the [AID Framework](https://crln.acrl.org/index.php/crlnews/article/view/26548/34482) into the project's core identity.
   - **Architectural Shift:** Migrated to the **Astro** framework for improved componentization while maintaining the legacy vanilla HTML version.
   - **UI Refinement:** Unified footer link colors and added custom mouse cursors for each theme.
-  - **AID Statement:** Artificial Intelligence Tool: Gemini 2.0 Flash (via Gemini CLI); Execution: Used for rebranding - architecture migration - and CSS refinement; Writing—Review & Editing: Used for documentation updates.
+  - **Version Switcher:** Added a themed link in the bottom-left corner to toggle between Classic (HTML) and Astro versions.
+  - **AID Statement:** Artificial Intelligence Tool: Gemini 2.0 Flash (via Gemini CLI); Execution: Used for rebranding - architecture migration - CSS refinement - and implementing a cross-version switcher; Writing—Review & Editing: Used for documentation updates.
 - **March 12, 2026:**
   - **The Theme Explosion:** Expanded from a basic timer to a multi-theme powerhouse. Added "Brutalist," "Indie Cat," and a "Randomizer" that generates unique aesthetics on the fly.
   - **Feature Parity:** Implemented [Pomofocus.io](https://pomofocus.io/) inspired modes (Short/Long Breaks), a Settings Modal, and session logging.
