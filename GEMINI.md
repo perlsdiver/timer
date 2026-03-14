@@ -6,16 +6,17 @@ A feature-rich, multi-theme Pomodoro-style web application designed for task foc
 
 - **Purpose:** A customizable "Timer" for productivity, exploring the boundaries of "vibe coding" prototypes.
 - **Technology Stack:** Dual-architecture supporting both Vanilla HTML5/CSS3/JS and Astro (SSG).
+- **Transparency:** Features a **Live AID Log** that tracks AI contributions and "Accumulated Energy" (token usage) in real-time.
 - **Deployment:** [https://perlsdiver.github.io/timer/](https://perlsdiver.github.io/timer/)
-- **Philosophy:** Part of the **CUNY AI Lab workshop** series, this project is built on the principle of iterative, interactive development.
 
-**AID Statement:** Artificial Intelligence Tool: Gemini 2.0 Flash (via Gemini CLI); Execution: Used for writing HTML - CSS - and JavaScript code; Data Curation: Used to organize project files and directory structure; Writing—Review & Editing: Used to generate documentation and changelog entries.
+**AID Statement:** Artificial Intelligence Tool: Gemini 2.0 Flash (via Gemini CLI); Execution: Implemented themed version switcher - established Live AID Log architecture - and token tracking heuristic; Data Curation: Created aid-history.json; Writing—Review & Editing: Updated documentation for version switching.
 
 ## Directory Structure
 
 - `index.html`: Entry point for the Vanilla version.
 - `astro-timer/`: Source code for the Astro framework version.
 - `astro/`: Production deployment build of the Astro version.
+- `aid-history.json`: Single source of truth for the project's AI disclosure history and token tracking.
 - `css/` & `js/`: Core logic and styles (Vanilla version).
 - `assets/`: Shared audio and icons.
 
@@ -26,6 +27,7 @@ A feature-rich, multi-theme Pomodoro-style web application designed for task foc
     - **Aesthetics:** Dark Minimalist, Brutalist Light, Brutalist Dark, Indieweb Cat Town.
     - **Randomizer:** Dynamically generates unique color, font, and background combinations.
     - **Cursors:** Custom theme-specific mouse cursors (e.g., 🐱, crosshair, vertical-text).
+- **Live AID Log:** A themed disclosure drawer (bottom-right) displaying the latest AID Statement and accumulated token counts.
 - **Goal Tracking:** Real-time focus goal input and display.
 - **Audio Alerts:** Bell sound triggers on session completion.
 
@@ -40,13 +42,14 @@ All versions of the application MUST maintain the following in the footer:
 
 ## Project Evolution (Changelog)
 
-- **March 13, 2026:** Rebranded to **Frankentimer**. Integrated the AID Framework. Migrated to Astro while preserving the Vanilla version. Unified UI link styles - expanded theme cursors - and added a themed version switcher.
-- **March 12, 2026:** Massive theme expansion (Brutalist, Indie Cat, Randomizer). Added settings modal, session logging, and HQ audio alerts.
-- **March 10, 2026:** Initial prototype creation at the CUNY AI Lab workshop. Basic Pomodoro logic and goal tracking implemented.
+- **March 13, 2026 (v1.3.0):** Implemented **Live AID Log** with themed disclosure drawer. Established token tracking heuristic and `aid-history.json` architecture. Added version switcher.
+- **March 13, 2026 (v1.2.0):** Rebranded to **Frankentimer**. Integrated the AID Framework. Migrated to Astro. Unified UI link styles and expanded theme cursors.
+- **March 12, 2026 (v1.1.0):** Massive theme expansion (Brutalist, Indie Cat, Randomizer). Added settings modal, session logging, and HQ audio alerts.
+- **March 10, 2026 (v1.0.0):** Initial prototype creation at the CUNY AI Lab workshop.
 
 ## Development Conventions
 
-- **AID Compliance:** For all future updates, follow the Artificial Intelligence Disclosure (AID) Framework protocol.
+- **AID Compliance:** ALL future updates MUST follow the AID Framework protocol. Update `aid-history.json` and the `AID Statement` in all documentation as the first step of the Execution phase.
 - **Living Project:** Documentation and code should reflect the project's evolutionary nature.
 - **Vanilla JS:** Core logic remains dependency-free (ES6+).
 - **Git:** Never stage or commit changes unless explicitly requested.
