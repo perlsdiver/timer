@@ -13,3 +13,19 @@ This project follows the [AI Use Disclosure Guide](https://crln.acrl.org/index.p
 - Multi-theme support (Original, Brutalist, Dark Brutalist, Indieweb Cat Town, Randomizer).
 - Real-time goal tracking.
 - Session logging.
+
+## Project Evolution & Changelog
+**Frankentimer** is a "living" project—a digital canvas that grows and evolves through continuous experimentation and negotiation between the user and **Gemini**. Its purpose is to explore the boundaries of "vibe coding," where instructions and intent shape the application in real-time.
+
+### Major Milestones:
+- **March 13, 2026:**
+  - **The Rebranding:** Re-christened the project as **Frankentimer**.
+  - **Ethical Framework:** Integrated the [AI Use Disclosure Guide](https://crln.acrl.org/index.php/crlnews/article/view/26548/34482) into the project's core identity.
+  - **Architectural Shift:** Migrated to the **Astro** framework for improved componentization while maintaining the legacy vanilla HTML version.
+  - **UI Refinement:** Unified footer link colors and added custom mouse cursors for each theme.
+- **March 12, 2026:**
+  - **The Theme Explosion:** Expanded from a basic timer to a multi-theme powerhouse. Added "Brutalist," "Indie Cat," and a "Randomizer" that generates unique aesthetics on the fly.
+  - **Feature Parity:** Implemented Pomofocus-style modes (Short/Long Breaks), a Settings Modal, and session logging.
+  - **Sensory Feedback:** Added HQ audio alerts for timer completion.
+- **March 10, 2026:**
+  - **The Genesis:** Project initiated during the **CUNY AI Lab: Vibe Coding Prototypes** workshop. Initial implementation of the core Pomodoro logic and goal tracking.
