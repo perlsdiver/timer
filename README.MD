@@ -8,11 +8,15 @@ For more information and context on vibe coding prototypes, please visit the off
 ## AI Disclosure
 This project follows the [AI Use Disclosure Guide](https://crln.acrl.org/index.php/crlnews/article/view/26548/34482).
 
+**AID Statement:** Artificial Intelligence Tool: Gemini 2.0 Flash (via Gemini CLI); Execution: Used for writing HTML - CSS - and JavaScript code; Data Curation: Used to organize project files and directory structure; Writing—Review & Editing: Used to generate documentation and changelog entries.
+
 ## Features
-- Minimalist Pomodoro-style timer.
+- Minimalist Pomodoro-style timer inspired by [Pomofocus.io](https://pomofocus.io/).
 - Multi-theme support (Original, Brutalist, Dark Brutalist, Indieweb Cat Town, Randomizer).
 - Real-time goal tracking.
 - Session logging.
+- Audio alerts: ["Bell" by HerbertBoland](https://freesound.org/people/HerbertBoland/sounds/30153/) via Freesound.org.
+- Images: [PlaceCats.com](https://placecats.com/) and [Picsum Photos](https://picsum.photos/).
 
 ## Project Evolution & Changelog
 **Frankentimer** is a "living" project—a digital canvas that grows and evolves through continuous experimentation and negotiation between the user and **Gemini**. Its purpose is to explore the boundaries of "vibe coding," where instructions and intent shape the application in real-time.
@@ -20,12 +24,15 @@ This project follows the [AI Use Disclosure Guide](https://crln.acrl.org/index.p
 ### Major Milestones:
 - **March 13, 2026:**
   - **The Rebranding:** Re-christened the project as **Frankentimer**.
-  - **Ethical Framework:** Integrated the [AI Use Disclosure Guide](https://crln.acrl.org/index.php/crlnews/article/view/26548/34482) into the project's core identity.
+  - **Ethical Framework:** Integrated the [AID Framework](https://crln.acrl.org/index.php/crlnews/article/view/26548/34482) into the project's core identity.
   - **Architectural Shift:** Migrated to the **Astro** framework for improved componentization while maintaining the legacy vanilla HTML version.
   - **UI Refinement:** Unified footer link colors and added custom mouse cursors for each theme.
+  - **AID Statement:** Artificial Intelligence Tool: Gemini 2.0 Flash (via Gemini CLI); Execution: Used for rebranding - architecture migration - and CSS refinement; Writing—Review & Editing: Used for documentation updates.
 - **March 12, 2026:**
   - **The Theme Explosion:** Expanded from a basic timer to a multi-theme powerhouse. Added "Brutalist," "Indie Cat," and a "Randomizer" that generates unique aesthetics on the fly.
-  - **Feature Parity:** Implemented Pomofocus-style modes (Short/Long Breaks), a Settings Modal, and session logging.
-  - **Sensory Feedback:** Added HQ audio alerts for timer completion.
+  - **Feature Parity:** Implemented [Pomofocus.io](https://pomofocus.io/) inspired modes (Short/Long Breaks), a Settings Modal, and session logging.
+  - **Sensory Feedback:** Added HQ audio alerts using ["Bell" by HerbertBoland](https://freesound.org/people/HerbertBoland/sounds/30153/).
+  - **AID Statement:** Artificial Intelligence Tool: Gemini 2.0 Flash (via Gemini CLI); Execution: Used for theme logic - modal implementation - and audio integration.
 - **March 10, 2026:**
   - **The Genesis:** Project initiated during the **CUNY AI Lab: Vibe Coding Prototypes** workshop. Initial implementation of the core Pomodoro logic and goal tracking.
+  - **AID Statement:** Artificial Intelligence Tool: Gemini 2.0 Flash (via Gemini CLI); Execution: Used for initial project scaffolding and core timer mechanics.
