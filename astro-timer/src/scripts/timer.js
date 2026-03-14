@@ -52,7 +52,7 @@ function updateDisplay() {
   const m = Math.floor(remaining / 60);
   const s = remaining % 60;
   timerEl.textContent = pad(m) + ":" + pad(s);
-  document.title = `${pad(m)}:${pad(s)} - Focus Timer`;
+  document.title = `${pad(m)}:${pad(s)} - Frankentimer`;
 }
 
 window.pad = function(num) {

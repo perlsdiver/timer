@@ -233,11 +233,13 @@
   margin: 4px 0;
 }
 
+footer a,
 .attribution a {
   color: #777;
   text-decoration: underline;
 }
 
+footer a:hover,
 .attribution a:hover {
   color: #999;
 }

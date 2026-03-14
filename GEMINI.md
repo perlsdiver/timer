@@ -1,4 +1,4 @@
-# GEMINI Context: Timer (formerly Focus Timer)
+# GEMINI Context: Frankentimer (formerly Focus Timer)
 
 A feature-rich, multi-theme Pomodoro-style web application designed for task focus with alternating work and break sessions.
 
