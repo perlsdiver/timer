@@ -1,5 +1,5 @@
 // runs on load — sets up the page from config
-fetch("site-config.json")
+fetch("../site-config.json")
   .then(function (res) { return res.json(); })
   .then(function (data) {
     document.title = data.title;
@@ -12,7 +12,7 @@ fetch("site-config.json")
   });
 
 // Fetch AID History
-fetch("aid-history.json")
+fetch("../aid-history.json")
   .then(function (res) { return res.json(); })
   .then(function (data) {
     const aidText = document.getElementById("aid-statement-text");
