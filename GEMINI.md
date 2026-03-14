@@ -9,7 +9,7 @@ A feature-rich, multi-theme Pomodoro-style web application designed for task foc
 - **Transparency:** Features a **Live AID Log** that tracks AI contributions and "Accumulated Energy" (token usage) in real-time.
 - **Deployment:** [https://perlsdiver.github.io/timer/](https://perlsdiver.github.io/timer/)
 
-**AID Statement:** Artificial Intelligence Tool: Gemini 2.0 Flash (via Gemini CLI); Execution: Implemented themed version switcher - established Live AID Log architecture - and token tracking heuristic; Data Curation: Created aid-history.json; Writing—Review & Editing: Updated documentation for version switching.
+**AID Statement:** Artificial Intelligence Tool: Gemini 2.0 Flash (via Gemini CLI); Execution: Repositioned AID disclosure drawer to right-260px to resolve UI overlap with Style switcher; Writing—Review & Editing: Updated project context documentation.
 
 ## Directory Structure
 
@@ -27,7 +27,7 @@ A feature-rich, multi-theme Pomodoro-style web application designed for task foc
     - **Aesthetics:** Dark Minimalist, Brutalist Light, Brutalist Dark, Indieweb Cat Town.
     - **Randomizer:** Dynamically generates unique color, font, and background combinations.
     - **Cursors:** Custom theme-specific mouse cursors (e.g., 🐱, crosshair, vertical-text).
-- **Live AID Log:** A themed disclosure drawer (bottom-right) displaying the latest AID Statement and accumulated token counts.
+- **Live AID Log:** A themed disclosure drawer (bottom-right, repositioned for accessibility) displaying the latest AID Statement and accumulated token counts.
 - **Goal Tracking:** Real-time focus goal input and display.
 - **Audio Alerts:** Bell sound triggers on session completion.
 
@@ -42,9 +42,10 @@ All versions of the application MUST maintain the following in the footer:
 
 ## Project Evolution (Changelog)
 
-- **March 13, 2026 (v1.3.0):** Implemented **Live AID Log** with themed disclosure drawer. Established token tracking heuristic and `aid-history.json` architecture. Added version switcher.
-- **March 13, 2026 (v1.2.0):** Rebranded to **Frankentimer**. Integrated the AID Framework. Migrated to Astro. Unified UI link styles and expanded theme cursors.
-- **March 12, 2026 (v1.1.0):** Massive theme expansion (Brutalist, Indie Cat, Randomizer). Added settings modal, session logging, and HQ audio alerts.
+- **March 13, 2026 (v1.3.1):** Repositioned AID LOG button to clear "STYLE" label overlap. Fixed relative fetch paths for Astro deployment.
+- **March 13, 2026 (v1.3.0):** Implemented **Live AID Log** with themed disclosure drawer and `aid-history.json` architecture. Added version switcher.
+- **March 13, 2026 (v1.2.0):** Rebranded to **Frankentimer**. Integrated the AID Framework. Migrated to Astro.
+- **March 12, 2026 (v1.1.0):** Massive theme expansion and feature parity with Pomofocus.
 - **March 10, 2026 (v1.0.0):** Initial prototype creation at the CUNY AI Lab workshop.
 
 ## Development Conventions
