@@ -1,7 +1,13 @@
 {
   "project": "Frankentimer",
-  "total_tokens_estimated": 68500,
+  "total_tokens_estimated": 83500,
   "history": [
+    {
+      "date": "2026-03-22",
+      "version": "1.4.0",
+      "tokens_estimated": 15000,
+      "statement": "AID Statement: Artificial Intelligence Tool: Gemini 2.0 Flash (via Gemini CLI); Execution: Implemented PhD Sprint mode (30 min) - persistent randomizer logic - and GitHub deployment automation; Data Curation: Created GitHub Issue templates and workflow; Writing—Review & Editing: Updated documentation and ethical logs."
+    },
     {
       "date": "2026-03-13",
       "version": "1.3.0",
@@ -12,7 +18,7 @@
       "date": "2026-03-13",
       "version": "1.2.0",
       "tokens_estimated": 8500,
-      "statement": "AID Statement: Artificial Intelligence Tool: Gemini 2.0 Flash (via Gemini CLI); Execution: Used for rebranding to Frankentimer - architecture migration to Astro - and CSS refinement; Writing—Review & Editing: Used for documentation updates."
+      "statement": "AID Statement: Artificial Intelligence Tool: Gemini 2.0 Flash (via Gemini CLI); Execution: Used for rebranding to Frankentimer - architecture migration to Astro - and CSS refinement; Writing—Review & Editing: Updated documentation updates."
     },
     {
       "date": "2026-03-12",

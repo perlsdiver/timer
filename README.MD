@@ -8,20 +8,26 @@ For more information and context on vibe coding prototypes, please visit the off
 ## AI Disclosure
 This project follows the [AI Use Disclosure Guide](https://crln.acrl.org/index.php/crlnews/article/view/26548/34482).
 
-**AID Statement:** Artificial Intelligence Tool: Gemini 2.0 Flash (via Gemini CLI); Execution: Used for writing HTML - CSS - and JavaScript code; Data Curation: Used to organize project files and directory structure; Writing—Review & Editing: Used to generate documentation and changelog entries.
+**AID Statement:** Artificial Intelligence Tool: Gemini 2.0 Flash (via Gemini CLI); Execution: Implemented PhD Sprint mode (30 min) - persistent randomizer logic - and GitHub deployment automation; Writing—Review & Editing: Updated documentation and ethical logs.
 
 ## Features
 - Minimalist Pomodoro-style timer inspired by [Pomofocus.io](https://pomofocus.io/).
-- Multi-theme support (Original, Brutalist, Dark Brutalist, Indieweb Cat Town, Randomizer).
-- Real-time goal tracking.
-- Session logging.
-- Audio alerts: ["Bell" by HerbertBoland](https://freesound.org/people/HerbertBoland/sounds/30153/) via Freesound.org.
+- **PhD Sprint Mode:** 30-minute academic focus timer aligning with the AID Framework.
+- Multi-theme support (Original, Brutalist, Dark Brutalist, Indieweb Cat Town, Persistent Randomizer).
+- Real-time goal tracking and session logging.
+- Audio alerts and custom mouse cursors.
 - Images: [PlaceCats.com](https://placecats.com/) and [Picsum Photos](https://picsum.photos/).
 
 ## Project Evolution & Changelog
 **Frankentimer** is a "living" project—a digital canvas that grows and evolves through continuous experimentation and negotiation between the user and **Gemini**. Its purpose is to explore the boundaries of "vibe coding," where instructions and intent shape the application in real-time.
 
 ### Major Milestones:
+- **March 22, 2026:**
+  - **The Academic Vibe:** Added **PhD Sprint** mode (30 min) for doctoral-level deep work.
+  - **Persistent Randomness:** Updated the **Randomizer** theme to save "vibes" in localStorage.
+  - **Automation:** Implemented GitHub Actions for automatic Astro deployment to GitHub Pages.
+  - **Issue Templates:** Formalized AI negotiation with "Vibe Shift" and "Feature Request" templates.
+  - **AID Statement:** Artificial Intelligence Tool: Gemini 2.0 Flash (via Gemini CLI); Execution: Implemented PhD Sprint mode - persistent randomizer - and GitHub automation; Writing—Review & Editing: Updated documentation.
 - **March 13, 2026:**
   - **The Rebranding:** Re-christened the project as **Frankentimer**.
   - **Ethical Framework:** Integrated the [AID Framework](https://crln.acrl.org/index.php/crlnews/article/view/26548/34482) into the project's core identity.

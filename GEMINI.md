@@ -9,7 +9,7 @@ A feature-rich, multi-theme Pomodoro-style web application designed for task foc
 - **Transparency:** Features a **Live AID Log** that tracks AI contributions and "Accumulated Energy" (token usage) in real-time.
 - **Deployment:** [https://perlsdiver.github.io/timer/](https://perlsdiver.github.io/timer/)
 
-**AID Statement:** Artificial Intelligence Tool: Gemini 2.0 Flash (via Gemini CLI); Execution: Repositioned AID disclosure drawer to right-260px to resolve UI overlap with Style switcher; Writing—Review & Editing: Updated project context documentation.
+**AID Statement:** Artificial Intelligence Tool: Gemini 2.0 Flash (via Gemini CLI); Execution: Implemented PhD Sprint mode (30 min) - persistent randomizer logic - and GitHub deployment automation; Writing—Review & Editing: Updated project documentation and ethical logs.
 
 ## Directory Structure
 
@@ -42,6 +42,7 @@ All versions of the application MUST maintain the following in the footer:
 
 ## Project Evolution (Changelog)
 
+- **March 22, 2026 (v1.4.0):** Implemented **PhD Sprint** mode (30 min), persistent randomizer logic (via localStorage), and GitHub deployment automation (Astro). Added GitHub Issue Templates for "Vibe Shifts".
 - **March 13, 2026 (v1.3.1):** Repositioned AID LOG button to clear "STYLE" label overlap. Fixed relative fetch paths for Astro deployment.
 - **March 13, 2026 (v1.3.0):** Implemented **Live AID Log** with themed disclosure drawer and `aid-history.json` architecture. Added version switcher.
 - **March 13, 2026 (v1.2.0):** Rebranded to **Frankentimer**. Integrated the AID Framework. Migrated to Astro.

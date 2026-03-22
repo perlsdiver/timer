@@ -30,32 +30,51 @@ function applyTheme(themeName) {
 
   if (themeName === "theme-random") {
     body.classList.add("theme-random");
-    generateRandomTheme();
+    
+    // Check for saved random vibe
+    const savedVibe = localStorage.getItem("focus-random-vibe");
+    if (savedVibe) {
+      const vibe = JSON.parse(savedVibe);
+      generateRandomTheme(vibe);
+    } else {
+      generateRandomTheme();
+    }
   } else if (themeName) {
     body.classList.add(themeName);
   }
 }
 
-function generateRandomTheme() {
-  const hue = Math.floor(Math.random() * 360);
-  const bgColor = `hsl(${hue}, 30%, 90%)`;
-  const textColor = `hsl(${hue}, 60%, 20%)`;
-  const accentColor = `hsl(${(hue + 180) % 360}, 70%, 50%)`;
+function generateRandomTheme(existingVibe = null) {
+  let vibe;
   
-  const fonts = [
-    "'Courier New', monospace",
-    "system-ui, sans-serif",
-    "'Georgia', serif",
-    "'Impact', sans-serif",
-    "'Comic Sans MS', cursive"
-  ];
-  const randomFont = fonts[Math.floor(Math.random() * fonts.length)];
-  
-  const bgImageId = Math.floor(Math.random() * 1000);
-  const bgUrl = `https://picsum.photos/seed/${bgImageId}/800/600?blur=5`;
+  if (existingVibe) {
+    vibe = existingVibe;
+  } else {
+    const hue = Math.floor(Math.random() * 360);
+    const fonts = [
+      "'Courier New', monospace",
+      "system-ui, sans-serif",
+      "'Georgia', serif",
+      "'Impact', sans-serif",
+      "'Comic Sans MS', cursive"
+    ];
+    const cursors = ["cell", "copy", "wait", "move", "vertical-text", "zoom-in", "grab"];
+    
+    vibe = {
+      hue: hue,
+      font: fonts[Math.floor(Math.random() * fonts.length)],
+      bgImageId: Math.floor(Math.random() * 1000),
+      cursor: cursors[Math.floor(Math.random() * cursors.length)],
+      borderRadius: Math.random() > 0.5 ? '0px' : '30px'
+    };
+    
+    localStorage.setItem("focus-random-vibe", JSON.stringify(vibe));
+  }
 
-  const cursors = ["cell", "copy", "wait", "move", "vertical-text", "zoom-in", "grab"];
-  const randomCursor = cursors[Math.floor(Math.random() * cursors.length)];
+  const bgColor = `hsl(${vibe.hue}, 30%, 90%)`;
+  const textColor = `hsl(${vibe.hue}, 60%, 20%)`;
+  const accentColor = `hsl(${(vibe.hue + 180) % 360}, 70%, 50%)`;
+  const bgUrl = `https://picsum.photos/seed/${vibe.bgImageId}/800/600?blur=5`;
 
   const styleSheet = document.createElement("style");
   styleSheet.id = "random-theme-style";
@@ -66,14 +85,14 @@ function generateRandomTheme() {
       background-size: cover !important;
       background-attachment: fixed !important;
       color: ${textColor} !important;
-      font-family: ${randomFont} !important;
-      cursor: ${randomCursor} !important;
+      font-family: ${vibe.font} !important;
+      cursor: ${vibe.cursor} !important;
     }
     .theme-random .card {
       background: rgba(255, 255, 255, 0.8) !important;
       backdrop-filter: blur(10px);
       border: 4px solid ${textColor} !important;
-      border-radius: ${Math.random() > 0.5 ? '0px' : '30px'} !important;
+      border-radius: ${vibe.borderRadius} !important;
       box-shadow: 10px 10px 0px ${accentColor} !important;
       color: ${textColor} !important;
     }
@@ -97,7 +116,7 @@ function generateRandomTheme() {
       background: ${bgColor} !important;
       color: ${textColor} !important;
       border: 2px solid ${accentColor} !important;
-      font-family: ${randomFont} !important;
+      font-family: ${vibe.font} !important;
       padding: 5px !important;
     }
   `;

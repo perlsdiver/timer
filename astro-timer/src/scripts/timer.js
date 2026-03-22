@@ -7,6 +7,7 @@ const resetBtn = document.getElementById("reset-btn");
 const sessionLog = document.getElementById("session-log");
 
 const pomodoroBtn = document.getElementById("pomodoro-btn");
+const phdBtn = document.getElementById("phd-btn");
 const shortBtn = document.getElementById("short-btn");
 const longBtn = document.getElementById("long-btn");
 
@@ -24,11 +25,12 @@ const alarmSound = new Audio("/alarm.mp3");
 // Default Settings
 let settings = {
   pomodoro: 25,
+  phd: 30,
   short: 5,
   long: 15
 };
 
-let currentMode = 'pomodoro'; // 'pomodoro', 'short', 'long'
+let currentMode = 'pomodoro'; // 'pomodoro', 'phd', 'short', 'long'
 let remaining = settings.pomodoro * 60;
 let interval = null;
 let isRunning = false;
@@ -38,6 +40,8 @@ function loadSettings() {
   const savedSettings = localStorage.getItem("timer-settings");
   if (savedSettings) {
     settings = JSON.parse(savedSettings);
+    if (!settings.phd) settings.phd = 30;
+    
     pomodoroInput.value = settings.pomodoro;
     shortInput.value = settings.short;
     longInput.value = settings.long;
@@ -66,7 +70,7 @@ function switchMode(mode) {
   remaining = settings[mode] * 60;
   
   // UI Updates
-  [pomodoroBtn, shortBtn, longBtn].forEach(btn => btn.classList.remove("active"));
+  [pomodoroBtn, phdBtn, shortBtn, longBtn].forEach(btn => btn.classList.remove("active"));
   document.getElementById(`${mode}-btn`).classList.add("active");
   
   startBtn.disabled = false;
@@ -90,8 +94,13 @@ startBtn.addEventListener("click", function () {
       isRunning = false;
       alarmSound.play();
       
-      const modeLabel = currentMode === 'pomodoro' ? "Focus" : (currentMode === 'short' ? "Short Break" : "Long Break");
-      logSession(modeLabel, settings[currentMode]);
+      const modeLabels = {
+        'pomodoro': "Focus",
+        'phd': "PhD Sprint",
+        'short': "Short Break",
+        'long': "Long Break"
+      };
+      logSession(modeLabels[currentMode], settings[currentMode]);
 
       startBtn.disabled = false;
       pauseBtn.disabled = true;
@@ -117,6 +126,7 @@ resetBtn.addEventListener("click", function () {
 
 // Mode Switch Listeners
 pomodoroBtn.addEventListener("click", () => switchMode('pomodoro'));
+phdBtn.addEventListener("click", () => switchMode('phd'));
 shortBtn.addEventListener("click", () => switchMode('short'));
 longBtn.addEventListener("click", () => switchMode('long'));
 
