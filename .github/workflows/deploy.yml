@@ -21,7 +21,6 @@ jobs:
         with:
           path: ./astro-timer/
           node-version: 20
-          out-dir: ../astro
 
   deploy:
     needs: build
