@@ -1,4 +1,4 @@
-name: Deploy Astro to GitHub Pages
+name: Build and Deploy
 
 on:
   push:
@@ -16,11 +16,41 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Install, build, and upload
-        uses: withastro/action@v3
+      
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          path: ./astro-timer/
           node-version: 20
+          cache: 'npm'
+          cache-dependency-path: './astro-timer/package-lock.json'
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ./astro-timer
+
+      - name: Build Astro
+        run: npm run build
+        working-directory: ./astro-timer
+
+      - name: Assemble Site
+        run: |
+          mkdir final_site
+          # Copy root classic files (excluding build related folders)
+          cp -r assets final_site/
+          cp -r css final_site/
+          cp -r js final_site/
+          cp index.html final_site/
+          cp aid-history.json final_site/
+          cp site-config.json final_site/
+          
+          # Copy Astro build into the 'astro' subfolder
+          mkdir -p final_site/astro
+          cp -r astro-timer/dist/* final_site/astro/
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./final_site
 
   deploy:
     needs: build
