@@ -22,6 +22,53 @@ const longInput = document.getElementById("long-duration");
 
 const alarmSound = new Audio("assets/alarm.mp3");
 
+// Audio Map based on Themes and Modes
+const AUDIO_MAP = {
+  'default': 'assets/alarm.mp3', // Dark Minimalist
+  'theme-brutalist': 'https://freesound.org/data/previews/198/198841_3430545-lq.mp3', // Industrial Buzz
+  'theme-dark-brutalist': 'https://freesound.org/data/previews/198/198841_3430545-lq.mp3',
+  'theme-indie-cat': 'https://freesound.org/data/previews/535/535840_11861213-lq.mp3', // Lofi Meow
+  'phd-sprint': 'https://freesound.org/data/previews/415/415211_5465561-lq.mp3', // School Bell
+  'chime': 'https://freesound.org/data/previews/536/536108_11586718-lq.mp3' // Minimalist Chime
+};
+
+let soundOfTheDayUrl = null;
+
+// Fetch Sound of the Day (Proxy/JSONP workaround simulation)
+async function fetchSoundOfTheDay() {
+  try {
+    // Freesound API usually requires a key, but we can simulate the "Randomizer" 
+    // feel by picking from a curated 'weird' list or using their RSS/SOTD if accessible.
+    // For now, let's use a stable 'Randomizer' sound or a placeholder logic.
+    const randomSounds = [
+      'https://freesound.org/data/previews/301/30153_212871-lq.mp3', // Bell
+      'https://freesound.org/data/previews/415/415510_7113941-lq.mp3', // Simple Notification
+      'https://freesound.org/data/previews/511/511484_10815185-lq.mp3' // Sci-Fi
+    ];
+    soundOfTheDayUrl = randomSounds[Math.floor(Math.random() * randomSounds.length)];
+  } catch (e) {
+    console.error("Failed to fetch SOTD", e);
+  }
+}
+fetchSoundOfTheDay();
+
+// Update alarm source based on theme/mode
+function getThemedAlarm() {
+  const body = document.body;
+  const activeTheme = Array.from(body.classList).find(c => c.startsWith('theme-')) || 'default';
+  
+  if (currentMode === 'phd') return AUDIO_MAP['phd-sprint'];
+  
+  if (activeTheme === 'theme-random' && soundOfTheDayUrl) {
+    return soundOfTheDayUrl;
+  }
+  
+  // Minimalist Chime for default theme
+  if (activeTheme === 'default') return AUDIO_MAP['chime'];
+
+  return AUDIO_MAP[activeTheme] || AUDIO_MAP['default'];
+}
+
 // Default Settings
 let settings = {
   pomodoro: 25,
@@ -93,6 +140,9 @@ startBtn.addEventListener("click", function () {
     if (remaining <= 0) {
       clearInterval(interval);
       isRunning = false;
+      
+      // Select themed sound
+      alarmSound.src = getThemedAlarm();
       alarmSound.play();
       
       const modeLabels = {
